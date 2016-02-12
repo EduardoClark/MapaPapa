@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <!-- template.html -->
+<html>
+<head>
+  <!-- Site required Polymer components -->
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+{{ headContent() }}
+<style>#mapapapa {height: 600px !important}</style>
+<style>.leaflet-control-layers-base > label:nth-child(1) > input:nth-child(1) {display:none;}</style>
+<style>.leaflet-control-layers-overlays {margin:15px;</style>
+<style>.leaflet-control-layers-separator {border-top: 0px solid #ddd}</style>
+<style>input[type="checkbox"] {	display: none;}</style>
+<style>.iconline {float: left;width: 20px;height: 5px;margin: 5px 5px 5px 5px;border-width: 1px;border-style: solid;border-color: rgba(0,0,0,.2);}</style>
+<style>.leaflet-right .leaflet-control {width: 300px;	padding-left: 20px;}</style>
+<style>.leaflet-control-layers-overlays > label {margin-left:-20px}</style>
+<style>.navbar {background-color: #ffffff;border-width: 0 0 0px;}</style>
+<script src="jquery-1.12.0.min.js"></script>
+<style>.navbar-brand {padding: 0px 0px;	}</style>
+<script>
+$(document).ready(function(){
+    $(".leaflet-control-layers-list").click(function(){
+        $(".leaflet-control-layers").hide(1000);
+    });
+});
+</script>
+
+</head>
+<body>
+
+<div id="topnav">
+<br>
+{{ navbar }}
+</div>
+
+
+<div id="tagtag">
+<span style='font-weight:bold;font-size:25px;'>
+{{ hashhash }}  
+</span>
+</div>
+
+
+<div id="mapa">
+<br>
+{{ mymap }}
+</div>
+
+ <script> $( "div" ).removeClass( "container" ); </script>
+
+
+
+</body>
+</html>
